@@ -6,6 +6,6 @@ namespace Cars.Data
     public class CarsContext : DbContext
     {
         public CarsContext(DbContextOptions<CarsContext> options) : base(options) { }
-        public DbSet<Cars> Cars { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }
