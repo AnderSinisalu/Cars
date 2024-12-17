@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cars.Core\Cars.Core.csproj" />
     <ProjectReference Include="..\Cars.Data\Cars.Data.csproj" />
   </ItemGroup>
 

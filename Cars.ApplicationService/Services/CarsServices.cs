@@ -18,7 +18,7 @@ namespace Cars.ApplicationService.Services
 
         public async Task<Car> Create(CarsDto dto)
         {
-            Car car = new();
+            Car car = new Car();
 
             car.Id = Guid.NewGuid();
             car.Make = dto.Make;
@@ -67,13 +67,13 @@ namespace Cars.ApplicationService.Services
 
         public async Task<Car> Delete(Guid Id)
         {
-            var id = await _context.Cars
+            var car = await _context.Cars
                 .FirstOrDefaultAsync(x => x.Id == Id);
 
-            _context.Cars.Remove(id);
+            _context.Cars.Remove(car);
             await _context.SaveChangesAsync();
 
-            return id;
+            return car;
         }
     }
 }
